@@ -1,0 +1,58 @@
+﻿@model Natural_Age.Models.Especialista
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Especialista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Especialista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Especialista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Especialista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Especialista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EspecialistaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Natural_Age.Models.Especialista>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Especialista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Especialista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialidad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Especialista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Especialista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especialidad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EspecialistaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EspecialistaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EspecialistaID })
+        </td>
+    </tr>
+}
+
+</table>
